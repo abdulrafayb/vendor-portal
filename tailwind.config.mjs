@@ -42,6 +42,7 @@ const tailwindConfig = {
         "-paragraph": "#334770",
         "-light-blue": "#0055FF",
         "-dark-gray": "#2F2F2F",
+        "-light-gray": "#363636",
       },
 
       borderColor: {
