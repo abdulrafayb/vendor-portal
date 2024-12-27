@@ -1,26 +1,27 @@
-import Link from "next/link";
-import { twMerge } from "tailwind-merge";
+import Link from 'next/link';
+import { twMerge } from 'tailwind-merge';
 
 export default function LinkButton({
-  href = "/",
+  href = '/',
   text,
-  className = "",
-  target = "_self",
+  className = '',
+  target = '_self',
   ...props
 }) {
   return (
-    <div className="text-center">
-      <div
-        className={twMerge(
-          "-bg-button px-6 py-2.5 rounded-2xl text-[16px] inline-block w-auto",
-          className
-        )}
-        {...props}
-      >
-        <Link href={href} target={target}>
-          {text}
-        </Link>
-      </div>
+    <div className='text-center'>
+      <Link href={href} target={target} className='group'>
+        <div
+          className={twMerge(
+            'relative -bg-button-light px-6 py-3 rounded-full text-[15px] inline-block w-auto',
+            className
+          )}
+          {...props}
+        >
+          <div className='relative z-20'>{text}</div>
+          <div className='absolute top-0 right-0 w-[46px] h-full -bg-button-dark rounded-full z-10 group-hover:w-full transition-all duration-500 ease-in-out'></div>
+        </div>
+      </Link>
     </div>
   );
 }
