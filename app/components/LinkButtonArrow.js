@@ -12,7 +12,7 @@ export default function LinkButtonArrow({
   ...props
 }) {
   return (
-    <div className="">
+    <div>
       <Link href={href} target={target} className="group">
         <div
           className={twMerge(
@@ -21,7 +21,7 @@ export default function LinkButtonArrow({
           )}
           {...props}
         >
-          <div className="relative z-20">{text}</div>
+          <div className="relative z-20 font-medium">{text}</div>
 
           <div className="absolute top-0 right-0 w-[50px] h-full -bg-button-dark rounded-full z-10 group-hover:w-full transition-all duration-500 ease-in-out flex items-center justify-end pr-4">
             <Image src={ArrowRight} alt="arrow right" />

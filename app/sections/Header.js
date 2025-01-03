@@ -1,12 +1,61 @@
 "use client";
 
+import logoImage from "/public/logo.png";
+import ArrowDown from "/public/arrow-down.png";
+import IconOne from "/public/header-icon-one.png";
+import IconTwo from "/public/header-icon-two.png";
+import IconThree from "/public/header-icon-three.png";
+import IconFour from "/public/header-icon-four.png";
+import IconFive from "/public/header-icon-five.png";
+import IconSix from "/public/header-icon-six.png";
+import IconSeven from "/public/header-icon-seven.png";
+import LinkButton from "../components/LinkButton";
+
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import HoverMenu from "../components/HoverMenu";
 
-import logoImage from "/public/logo.png";
-import ArrowDown from "/public/arrow-down.png";
-import LinkButton from "../components/LinkButton";
+const solutionsData = [
+  {
+    icon: { src: IconOne, width: 25, height: 25 },
+    linkName: "Features",
+    linkDescription: "Simplified Procurement and Collaboration",
+  },
+  {
+    icon: { src: IconTwo, width: 28, height: 28 },
+    linkName: "Capabilities",
+    linkDescription: "Efficient, Collaborative, Scalable Solutions",
+  },
+  {
+    icon: { src: IconThree, width: 26, height: 27.53 },
+    linkName: "Insights",
+    linkDescription: "Actionable Data, Smarter Decisions",
+  },
+  {
+    icon: { src: IconFour, width: 33, height: 35 },
+    linkName: "AI Solutions",
+    linkDescription: "Intelligent, Scalable, Data-Driven Insights",
+  },
+];
+
+const resourcesData = [
+  {
+    icon: { src: IconFive, width: 28, height: 29.08 },
+    linkName: "Integration",
+    linkDescription: "Seamless Connectivity and Efficiency",
+  },
+  {
+    icon: { src: IconSix, width: 30, height: 30 },
+    linkName: "Documentation",
+    linkDescription: "Comprehensive Guides and Resources",
+  },
+  {
+    icon: { src: IconSeven, width: 30, height: 30 },
+    linkName: "FAQs",
+    linkDescription: "Answers Frequently Asked Questions",
+  },
+];
 
 export default function Header() {
   const pathname = usePathname();

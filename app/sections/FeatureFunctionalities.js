@@ -105,7 +105,7 @@ export default function FeatureFunctionalities() {
                   <Link
                     href={item.Link}
                     target="_blank"
-                    className="text-[16.44px] leading-[22.66px] flex gap-3 items-center"
+                    className="inline-flex self-start gap-3 items-center"
                   >
                     <div className="text-[15px] font-medium">
                       {item.LinkText}

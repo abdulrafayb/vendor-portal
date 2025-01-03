@@ -97,7 +97,7 @@ export default function Footer() {
                 <Link href="/">About Us</Link>
                 <Link href="/">Blogs</Link>
                 <Link href="/">Customer Stories</Link>
-                <Link href="/">Company</Link>
+                <Link href="/">AI Solutions</Link>
               </div>
             </div>
 

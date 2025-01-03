@@ -7,10 +7,12 @@ export default function HeadingBlueBubble({
   return (
     <div className="flex">
       <div
-        className={`inline-flex justify-center items-center mb-4 rounded-full -bg-heading py-1.5 px-6 font-medium ${className}`}
+        className={`inline-flex justify-center items-center mb-4 rounded-full -bg-heading py-1.5 px-6  ${className}`}
         {...props}
       >
-        <p className={`-text-light-blue text-[16.63px] ${textClassName}`}>
+        <p
+          className={`-text-light-blue text-[16.63px] font-medium ${textClassName}`}
+        >
           {text}
         </p>
       </div>

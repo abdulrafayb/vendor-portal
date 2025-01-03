@@ -6,6 +6,7 @@ const tailwindConfig = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
   theme: {
     screens: {
       sm: "400px",
@@ -46,9 +47,37 @@ const tailwindConfig = {
       borderColor: {
         "-dark-blue": "#00194C",
         "-light-gray": "#D7D7D7",
+        "-dark-gray": "#C2C2C2",
+        "-light-white": "#F3F3F3",
+      },
+
+      animation: {
+        "move-left": "move-left 1s linear infinite",
+        "move-right": "move-right 1s linear infinite",
+      },
+
+      keyframes: {
+        "move-left": {
+          "0%": {
+            transform: "translateX(0%)",
+          },
+          "100%": {
+            transform: "translateX(-50%)",
+          },
+        },
+
+        "move-right": {
+          "0%": {
+            transform: "translateX(-50%)",
+          },
+          "100%": {
+            transform: "translateX(0%)",
+          },
+        },
       },
     },
   },
+
   plugins: [
     function ({ addUtilities }) {
       addUtilities({
